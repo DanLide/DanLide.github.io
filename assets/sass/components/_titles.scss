@@ -1,0 +1,155 @@
+/* Titles */
+    .titles {
+        .movies-section {
+            @include vendor('transition', 'opacity .25s ease-in');
+
+            position: relative;
+            padding-top: 32px;
+            padding-bottom: 16px;
+
+            &-title {
+                text-transform: none;
+                color: _palette(section-title);
+                font-size: _font(section-title-font);
+                line-height: _font(section-title-lh);
+                font-weight: _font(section-title-fw);
+                margin-bottom: _size(section-margin-bottom);
+            }
+        }
+    }
+
+    .title-list {
+        &-options {
+            position: relative;
+            margin: 10px 15px;
+
+            &-box {
+                @include vendor('display', 'flex');
+                @include vendor('justify-content', 'space-between');
+                @include vendor('align-items', 'center');
+
+                font-size: _font(title-list-options);
+
+                &-options {
+                    @include vendor('display', 'flex');
+                    @include vendor('align-items', 'center');
+
+                    text-align: right;
+
+                    &-sorting {
+                        margin-left: 20px;
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+
+                .total-titles {
+                    color: _palette(total-titles);
+                }
+            }
+        }
+
+        &-sorting-switcher {
+            &-label {
+                margin-right: 1px;
+            }
+        }
+
+        &-grid {
+            @include vendor('display', 'grid');
+            @include vendor('grid-template-columns', 'repeat(auto-fill, minmax(170px, 1fr))');
+            
+            grid-gap: _size(grid-gap-size);
+            margin: 0 _size(grid-gap-size);
+        }
+    }
+
+    .title {
+        &-poster {
+            @include vendor('display', 'flex');
+            @include vendor('transition', 'opacity .1s ease');
+
+            position: relative;
+            padding-top: _size(stremnyi-padding);
+            overflow: hidden;
+            border-radius: _size(post-border-radius);
+
+            &-img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+
+            &-ribbon {
+                @include vendor('transition', 'opacity .2s ease');
+                
+                position: absolute;
+                z-index: 0;
+                font-size: _font(ribbon);
+                padding: 0 8px 8px 8px;
+                top: -3%;
+                left: 0;
+                color: _palette(ribbon);
+                opacity: .3;
+                width: _size(ribbon-width);
+                height: _size(ribbon-height);
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: _palette(header-bg);
+        width: _size(dropdown-content);
+        overflow: auto;
+        right: 0;
+        z-index: 1;
+        border-radius: _size(border-radius);
+    }
+
+    .dropdown-item {
+        @include vendor('display', 'flex');
+        @include vendor('transition', (
+                'background-color #{_duration(transition)} ease-in-out',
+                'color #{_duration(transition)} ease-in-out'
+            ));
+        cursor: pointer;
+
+        &:hover {
+            color: _palette(dropdown-item-text);
+            background-color: _palette(dropdown-item-bg);
+        }
+
+        &-label {
+            padding: _size(drop-label-padding);
+        }
+    }
+
+    .show {
+        display: block;
+    }
+
+/* Breakpoints */ 
+
+    @include breakpoint('<=large') {
+        .titles {
+            .movies-section {
+                margin: 0 _size(small-view-margin);
+            }
+        }
+    }
+
+    @include breakpoint('<=medium') {
+        .title-list {
+            &-grid {
+                @include vendor('grid-template-columns', 'repeat(auto-fill, minmax(160px, 1fr))');
+            }
+        }
+    }

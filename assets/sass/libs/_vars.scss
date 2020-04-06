@@ -1,0 +1,102 @@
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		menu:				0.45s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		border-radius:		4px,
+		border-width:		1px,
+		element-height:		3em,
+		element-margin:		2em,
+		gutter:				2.5em,
+		field-gutter:		2em,
+		inner:				68em,
+		menu:				22em,
+		header-nav-height:	60px,
+		header-nav-padding: 64px,
+		logo:				3em,
+		logout-btn-height:	60%,
+		menu-btn-padding:	3%,
+		section-margin-btm:	16px,
+		home-padding:		64px,
+		row-margin:			-15px,
+		dropdown-content:	150px,
+		grid-gap-size:		15px,
+		stremnyi-padding:	142.1686747%,
+		post-border-radius: 5px, 
+		container-width:	1170px,
+		drop-label-padding:	10px,
+		ribbon-height:		1em,
+		ribbon-width:		0.75em,
+		padding-col-xs-6:	15px,
+		width-col-xs-6:		50%,
+		container-padding:	15px,
+		hr-margin:			20px,
+		col-offset-margin:	8.33333%,
+		width-col-xs-12:	16.66667%,
+		h5-margin-top:		16px,
+		h5-margin-btm:		10px,
+		margin-btm-footer:	80px,
+		navbar-small-left:	4px,
+		navbar-btn-height:	56px,
+		bookmark-height:	1em,
+		home-small-padding:	0,
+		small-view-margin:	15px,
+	);
+
+// Font.
+	$font: (
+		family:				('Lato', Arial, sans-serif),
+		family-logo:		('Audiowide', cursive),
+		family-fixed:		('Courier New', monospace),
+		family-header:		('Lato', sans-serif),
+		weight:				300,
+		weight-bold:		900,
+		weight-bold-alt:	700,
+		letter-spacing:		0.35em,
+		letter-spacing-alt:	-0.035em,
+		section-title-font:	24px,
+		section-title-lh:	32px,
+		section-title-fw:	700,
+		title-list-options:	14px,
+		ribbon:				50px,
+		container:			14px,
+	);
+
+// Palette.
+	$palette: (
+		header-bg:			#0c151d,
+		menu-btn-font:		#989998,
+		logout-btn:			#222930,
+		logout-font:		#fff,
+		bg:					#0C151D,
+		bg-accent:			#333333,
+		bg-alt:				#f6f6f6,
+		fg:					#585858,
+		fg-accent:			#ffffff,
+		border:				#c9c9c9,
+		border-bg:			rgba(144,144,144,0.075),
+		accent1:			#f6f6f6,
+		accent2:			#7ecaf6,
+		accent3:			#7bd0c1,
+		btn-hover-bg:		#2b3541,
+		btn-active-bg:		#3f4650,
+		accent5:			#ae85ca,
+		accent6:			#8499e7,
+		h1:					#fff,
+		section-title:		#d9e8ed,
+		total-titles:		#fff,
+		dropdown-item-text:	#fff,
+		dropdown-item-bg:	#434f5b,
+		ribbon:				#fff,
+		container-color:	rgb(213, 213, 213),
+		container-secondary:#4c5a67,
+		hr:					#222930,
+	);

@@ -1,0 +1,47 @@
+/* Home */
+    .home {
+        position: relative;
+        margin: 0 auto;
+
+        max-width: 1752px;
+        padding-left: _size(home-padding);
+        padding-right: _size(home-padding);
+
+        &-header {
+            @include vendor('display', 'flex');
+            @include vendor('align-items', 'center');
+            
+            padding-top: 16px;
+
+            &-title {
+                @include vendor('display', 'flex');
+
+                font-size: 30px !important;
+                padding-bottom: 10px !important;
+                font-weight: 900;
+                color: _palette(h1);
+
+                line-height: 48px;
+                padding: 8px 0;
+                margin: 0;
+            }
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+
+/* Breakpoints */ 
+
+    @include breakpoint('<=large') {
+        .home {
+            padding-left: _size(home-small-padding);
+            padding-right: _size(home-small-padding);
+
+            &-header {
+                margin: 0 _size(small-view-margin);
+            }
+        }
+    }
+        
