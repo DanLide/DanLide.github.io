@@ -38,7 +38,7 @@
     }
 
     hr {
-        margin-top: _size(hr-margin)*2;
+        margin-top: _size(hr-margin);
         margin-bottom: _size(hr-margin);
 
         border: 0;
@@ -69,5 +69,37 @@
 
         > li {
             margin-bottom: .5em;
+        }
+    }
+
+/* Breakpoints */
+
+    @include breakpoint('<=large') {
+        .container {
+            width: _size(container-width-l);
+        }
+
+        .col-md-offset-1 {
+            margin-left: 0;
+        }
+
+        .col-xs-12 {
+            width: _size(width-col-xs-12-l);
+        }
+    }
+
+    @include breakpoint('<=medium') {
+        .container {
+            width: _size(container-width-m);
+        }
+
+        .col-xs-12 {
+            width: _size(width-col-xs-12-m);
+        }
+    }
+
+    @include breakpoint('<=small') {
+        .container {
+            width: _size(container-width-s);
         }
     }

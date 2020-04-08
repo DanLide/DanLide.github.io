@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ConTip</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Header -->
+        <header class="header">
+            <div class="navbar-container">
+                <nav class="navbar">
+                    <a href="index.html" class="logo no-border-btm">
+                        <span class="symbol">
+                            <img src="images/52c6e732-95a2-4d17-8ef2-e546b2b064df_200x200.png" alt="ConTip">
+                        </span>
+                        <span class="title">ConTip</span>
+                    </a>
+                    <div class="menu">
+                        <div class="menu-btn">
+                            <a href="index.html" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Home
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="search.html" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Search
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="#" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Profile
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="#" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Watchlist
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <div class="logout-btn no-border-btm">
+                                <button type="button">
+                                    Log out
+                                </button>
+                            </div>
+                        </div>
+                    </div><!-- /.menu -->
+                    <div class="navbar-small-left">
+                        <div class="navbar-btn">
+                            <a class="navbar-btn-link no-border-btm">
+                                <!-- Ne lez' ono tebya sozhret -->
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-bars fa-w-14" style="margin: 0px 0px 0px 15px; width: 20px; font-size: 16px;">
+                                    <path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar-small-right">
+                        <div class="navbar-btn">
+                            <div>
+                                <!-- Ne lez' ono tebya sozhret -->
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14">
+                                    <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-btn navbar-btn-watchlist">
+                        <a class="navbar-btn-link no-border-btm">
+                            <!-- Ne lez' ono tebya sozhret -->
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="navbar__button__icon bookmark svg-inline--fa fa-bookmark fa-w-12">
+                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav><!-- /.navbar -->
+            </div><!-- /.navbar-container -->
+        </header><!-- /.header -->
+
+    <!-- Main -->
+        <main class="main">
+            <div class="home">
+                <div class="titles">
+                    <section class="movies-section">
+                        <div class="row search-page">
+                            <div class="controls">
+                                <form>
+                                    <div class="search-container">
+                                        <div class="search">
+                                            <i class="fa fa-filter openbtn" onclick="openSidebar()" style="font-size:16px"></i>
+                                            <div id="filterSidebar" class="filter-sidebar">
+                                                <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">×</a>
+                                                <div class="accordion">
+                                                    <div class="accordion-btn .active opened active">
+                                                        <header class="accordion-header">
+                                                            <div>
+                                                                <div class="filters-title">
+                                                                    Genres
+                                                                </div>
+                                                            </div>
+                                                            <span class="icon">
+                                                                <div class="circle-plus closed">
+                                                                    <div class="circle">
+                                                                    <div class="horizontal"></div>
+                                                                    <div class="vertical"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </span>
+                                                        </header>
+                                                    </div>
+                                                    <div class="panel" style="max-height: 181px;">
+                                                        <div class="accordion-content">
+                                                            <div class="treeview">
+                                                                <div class="checkbox-section">
+                                                                    <div class="col-6 col-12-small">
+                                                                        <ul class="list">
+                                                                            <li class="list-item">
+                                                                                <input type="checkbox" id="genre1-side" name="genre1-side">
+                                                                                <label for="genre1-side">First Genre</label>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <input type="checkbox" id="genre2-side" name="genre2-side">
+                                                                                <label for="genre2-side">Second Genre</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /.accordion -->
+                                                <div class="accordion">
+                                                    <div class="accordion-btn">
+                                                        <header class="accordion-header">
+                                                            <div>
+                                                                <div class="filters-title">
+                                                                    Sort by
+                                                                </div>
+                                                            </div>
+                                                            <span class="icon">
+                                                                <div class="circle-plus closed">
+                                                                    <div class="circle">
+                                                                    <div class="horizontal"></div>
+                                                                    <div class="vertical"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </span>
+                                                        </header>
+                                                    </div>
+                                                    <div class="panel">
+                                                        <div class="accordion-content">
+                                                            <div class="treeview">
+                                                                <div class="checkbox-section">
+                                                                    <div class="col-6 col-12-small">
+                                                                        <ul class="list">
+                                                                            <li class="list-item">
+                                                                                <input type="checkbox" id="sort-ascending-side" name="sort-ascending-side">
+                                                                                <label for="sort-ascending-side">Ascending</label>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <input type="checkbox" id="sort-descending-side" name="sort-descending-side">
+                                                                                <label for="sort-descending-side">Descending</label>
+                                                                            </li>
+                                                                            <li class="list-item">
+                                                                                <input type="checkbox" id="sort-rating-side" name="sort-rating-side">
+                                                                                <label for="sort-rating-side">Rating</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!-- /.accordion -->
+                                            </div><!-- /.filter-sidebar -->
+                                            <button class="search-btn" type="button">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                            <span class="search-searched-count">
+                                                142 results
+                                            </span>
+                                            <input class="search-input">
+                                        </div><!-- ./search -->
+                                    </div><!-- /.search-container -->
+                                </form>
+                            </div><!-- /.controls -->
+                            <section class="filters-section">
+                                <div class="accordion">
+                                    <div class="accordion-btn .active opened active">
+                                        <header class="accordion-header">
+                                            <div>
+                                                <div class="filters-title">
+                                                    Genres
+                                                </div>
+                                            </div>
+                                            <span class="icon">
+                                                <div class="circle-plus closed">
+                                                    <div class="circle">
+                                                      <div class="horizontal"></div>
+                                                      <div class="vertical"></div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </header>
+                                    </div>
+                                    <div class="panel" style="max-height: 181px;">
+                                        <div class="accordion-content">
+                                            <div class="treeview">
+                                                <div class="checkbox-section">
+                                                    <div class="col-6 col-12-small">
+                                                        <ul class="list">
+                                                            <li class="list-item">
+                                                                <input type="checkbox" id="genre1" name="genre1">
+                                                                <label for="genre1">First Genre</label>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <input type="checkbox" id="genre2" name="genre2">
+                                                                <label for="genre2">Second Genre</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.accordion -->
+                                <div class="accordion">
+                                    <div class="accordion-btn">
+                                        <header class="accordion-header">
+                                            <div>
+                                                <div class="filters-title">
+                                                    Sort by
+                                                </div>
+                                            </div>
+                                            <span class="icon">
+                                                <div class="circle-plus closed">
+                                                    <div class="circle">
+                                                      <div class="horizontal"></div>
+                                                      <div class="vertical"></div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                        </header>
+                                    </div>
+                                    <div class="panel">
+                                        <div class="accordion-content">
+                                            <div class="treeview">
+                                                <div class="checkbox-section">
+                                                    <div class="col-6 col-12-small">
+                                                        <ul class="list">
+                                                            <li class="list-item">
+                                                                <input type="checkbox" id="sort-ascending" name="sort-ascending">
+                                                                <label for="sort-ascending">Ascending</label>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <input type="checkbox" id="sort-descending" name="sort-descending">
+                                                                <label for="sort-descending">Descending</label>
+                                                            </li>
+                                                            <li class="list-item">
+                                                                <input type="checkbox" id="sort-rating" name="sort-rating">
+                                                                <label for="sort-rating">Rating</label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.accordion -->
+                            </section><!-- /.filters-section -->
+                            <div class="title-list-grid">
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/10635711/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/154373248/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/172073366/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/152335398/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/130011621/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/10323124/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/120577802/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8587552/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8635336/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/91361/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8697367/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/34122798/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8668189/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8668241/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/449990/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8698860/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8695539/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                                <article class="title-list-grid-item">
+                                    <a href="#">
+                                        <div class="title-poster">
+                                            <!-- Ne lez' ono tebya sozhret -->
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                            </svg>
+                                            <img src="https://images.justwatch.com/poster/8711516/s166" alt="Contagion" class="title-poster-img">
+                                        </div>
+                                    </a>
+                                </article>
+                            </div><!-- /.title-list-grid -->
+                        </div><!-- /.row -->
+                    </section><!-- /.movies-section -->
+                </div><!-- /.titles -->
+            </div><!-- /.home -->
+        </main><!-- /.main -->
+
+    <!-- Footer -->
+        <footer class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <strong>ConTip</strong>
+                    | Recommendation Service
+                </div>
+                <div class="col-xs-6">
+                    © 2020 ConTip
+                    <span>(1.0.0)</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1">
+                    <h5>Top 5 movies</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Contagion</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Knives out</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Parasite</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Uncut Gems</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 TV Shows</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Devs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Avatar: The Last Airbender</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Better Call Saul</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">The Good Place</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Tiger King: Murder, Mayhem and Madness</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 in the theaters</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Knives Out</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Uncut Gems</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Jojo Rabbit</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Star Wars: The Rise of Skywalker</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 titles in 2020</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Devs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Jojo Rabbit</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Onward</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">Tiger King: Murder, Mayhem and Madness</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>The IMDb Top 5</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">The Shawshank Redemption</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">The Godfather</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">The Godfather 2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">The Dark Knight</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link no-border-btm">12 Angry Men</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/accordion.js"></script>
+        <script src="assets/js/dropdown.js"></script>
+        <script src="assets/js/sidebar.js"></script>
+</body>
+</html>

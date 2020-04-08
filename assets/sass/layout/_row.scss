@@ -1,0 +1,21 @@
+/* Row */
+
+	.row {
+        overflow: hidden;
+        margin-left: _size(row-margin);
+        margin-right: _size(row-margin);
+    }
+
+    .search-page {
+        margin-left: 0.5%;
+        margin-right: 1.5%;
+    }
+    
+/* Breakpoints */
+
+    @include breakpoint('<=large') {
+        .search-page {
+            margin-left: _size(row-margin);
+            margin-right: _size(row-margin);
+        }
+    }

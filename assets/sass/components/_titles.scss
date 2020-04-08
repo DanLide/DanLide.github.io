@@ -59,6 +59,7 @@
             @include vendor('display', 'grid');
             @include vendor('grid-template-columns', 'repeat(auto-fill, minmax(170px, 1fr))');
             
+
             grid-gap: _size(grid-gap-size);
             margin: 0 _size(grid-gap-size);
         }
@@ -136,6 +137,15 @@
         display: block;
     }
 
+    .search-page {
+        .title-list {
+            &-grid {
+                width: 72%;
+                float: right;
+            }
+        }
+    }
+
 /* Breakpoints */ 
 
     @include breakpoint('<=large') {
@@ -144,6 +154,15 @@
                 margin: 0 _size(small-view-margin);
             }
         }
+
+        .search-page {
+            .title-list {
+                &-grid {
+                    width: auto;
+                    float: unset;
+                }
+            }
+        }    
     }
 
     @include breakpoint('<=medium') {
