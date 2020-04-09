@@ -10,13 +10,14 @@
     width: 24%;
     background-color: #ffffff;
     float: left;
+    color: _palette(filters-color);
 }
 
 .filters-title {
     position: relative;
     text-transform: uppercase;
     padding: 14px 25px;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: _palette(filters-title-bg);
     font-weight: 800;
 }
 
@@ -51,10 +52,10 @@ i.fa-filter {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10000;
+    z-index: 3;
     top: 0;
     left: 0;
-    background-color: #101010;
+    background-color: _palette(filter-side-bg);
     overflow-x: hidden;
     @include vendor('transition', '0.5s');
     padding-top: 60px;
@@ -104,14 +105,10 @@ i.fa-filter {
     transition: 0.4s;
 }
 
-.active, .accordion-btn:hover {
-    background-color: #ccc;
-}
-
 .panel {
     max-height: 0;
     overflow: hidden;
-    @include vendor('transition', 'max-height 0.2s ease-out');
+    @include vendor('transition', 'max-height 0.4s ease-in-out');
 }
 
 .accordion-header {
@@ -129,7 +126,7 @@ i.fa-filter {
     overflow: hidden;
     max-height: 1200px;
     @include vendor('transition', 'max-height .4s ease-in-out');
-    background-color: rgba(250, 250, 250, .8);
+    background-color: _palette(accordion-content);
 }
 
 .treeview {
@@ -181,18 +178,18 @@ i.fa-filter {
 
 .circle-plus .circle .horizontal {
     position: absolute;
-    background-color: #000;
+    background-color: rgb(88, 88, 88);
     width: 20px;
     height: 2px;
     left: 50%;
     margin-left: -10px;
     top: 50%;
-    margin-top: -0.5px;
+    margin-top: -0.55px;
 }
 
 .circle-plus .circle .vertical {
     position: absolute;
-    background-color: #000;
+    background-color: rgb(88, 88, 88);
     width: 2px;
     height: 20px;
     left: 50%;
@@ -258,12 +255,21 @@ i.fa-filter {
 
 .search {
     position: relative;
-    z-index: 3;
+    z-index: 0;
     width: inherit;
+    background-color: _palette(search);
 
     &-page {
         .search-container {
             padding: 0;
+        }
+
+        &-section {
+            padding-top: 16px !important;
+        }
+
+        &-subtitle {
+            margin-bottom: _size(search-page-sub);
         }
     }
 }
@@ -310,7 +316,7 @@ input {
 @include breakpoint('<=medium') {
     .controls {
         .search-input {
-            padding: 11px 24% 11px 11%;
+            padding: 11px 24% 11px 12%;
         }
 
         .search-btn {
@@ -334,7 +340,7 @@ input {
         }
 
         .search-input {
-            padding: 11px 27% 11px 15%;
+            padding: 11px 27% 11px 17%;
         }
     }
 

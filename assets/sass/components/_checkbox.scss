@@ -11,7 +11,6 @@
 
         & + label {
             @include icon(false, solid);
-            color: _palette(fg);
             cursor: pointer;
             display: inline-block;
             font-size: 1em;
@@ -22,7 +21,7 @@
 
             &:before {
                 border-radius: _size(border-radius);
-                border: solid _size(border-width) _palette(border);
+                border: solid _size(border-width) _palette(fg);
                 content: '';
                 display: inline-block;
                 font-size: 0.8em;
@@ -47,8 +46,8 @@
 
         &:focus + label {
             &:before {
-                border-color: _palette(accent1);
-                box-shadow: 0 0 0 _size(border-width) _palette(accent1);
+                border-color: _palette(checkbox-accent);
+                box-shadow: 0 0 0 _size(border-width) _palette(checkbox-accent);
             }
         }
     }

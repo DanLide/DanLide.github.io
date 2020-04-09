@@ -24,7 +24,7 @@
 		logo:				3em,
 		logout-btn-height:	60%,
 		menu-btn-padding:	3%,
-		section-margin-btm:	16px,
+		section-margin-btm:	35px,
 		home-padding:		64px,
 		row-margin:			-15px,
 		dropdown-content:	150px,
@@ -49,11 +49,13 @@
 		h5-margin-top:		16px,
 		h5-margin-btm:		10px,
 		margin-btm-footer:	80px,
-		navbar-small-left:	4px,
+		navbar-small-left:	0,
+		navbar-small-top:	5%,
 		navbar-btn-height:	56px,
 		bookmark-height:	1em,
 		home-small-padding:	0,
 		small-view-margin:	15px,
+		search-page-sub:	35px,
 	);
 
 // Font.
@@ -105,4 +107,12 @@
 		container-secondary:#4c5a67,
 		hr:					#222930,
 		footer-link:		rgb(120, 166, 184),
+		search:				#0a1118,
+		filters-title-bg:	#0a1118,
+		filters-color:		#989998,
+		accordion-content:	#070c13,
+		checkbox-accent:	#989998,
+		filter-side-bg:		#0a1118,
+		small-menu-bg:		#000046,
+		active:				#000046,
 	);

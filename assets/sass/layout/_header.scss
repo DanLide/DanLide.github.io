@@ -33,6 +33,7 @@
                 @include vendor('align-items', 'center');
 
                 position: absolute;
+                top: _size(navbar-small-top);
                 left: _size(navbar-small-left);
             }
 
@@ -40,10 +41,11 @@
                 display: none;
 
                 position: absolute;
+                top: 3%;
                 right: 0;
 
                 > * {
-                    width: 50px;
+                    width: 46px;
                 }
             }
 
@@ -84,6 +86,75 @@
 
             .bookmark {
                 height: _size(bookmark-height);
+            }
+
+            &-toggle {
+
+                &-container {
+                    border-left: 1px solid transparent;
+                    padding: 20px;
+                }
+
+                &-btn {
+                    @include vendor('display', 'flex');
+                    @include vendor('flex-direction', 'column');
+                    @include vendor('align-items', 'flex-end');
+                    @include vendor('justify-content', 'space-between');
+                    @include vendor('flex-wrap', 'wrap');
+                    
+                    position: relative;
+                    width: 16px;
+                    height: 14px;
+                    cursor: pointer;
+
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+
+                    span {
+                        @include vendor('display', 'flex');
+                        height: 2px;
+                        width: 16px;
+                        background-color: _palette(menu-btn-font);
+
+                        &:nth-child(2), &:nth-child(3) {
+                            @include vendor('transform', 'translateY(-50%)');
+
+                            position: absolute;
+                            top: 50%;
+                        }
+
+                        &:last-child {
+                            width: 12px;
+                        }
+                    }
+
+                    &.active {
+                        span {
+                            @include vendor('transition', (
+                            'rotate,.25s ease-in-out',
+                            ));
+
+                            &:first-child {
+                                width: 0;
+                            }
+                            
+                            &:nth-child(2) {
+                                @include vendor('transform', 'rotate(45deg)');
+                                top: 6px;
+                            }
+
+                            &:nth-child(3) {
+                                @include vendor('transform', 'rotate(-45deg)');
+                                top: 6px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -187,6 +258,32 @@
         
                 &:active {
                     background-color: #565c5c;
+                }
+            }
+        }
+
+        .small-menu {
+            height: 0;
+            width: 0;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background: _palette(small-menu-bg);  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            @include vendor('transition', '.3s ease-in-out');
+
+            a {
+                &.closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+                    font-size: 36px;
+                    margin-left: 50px;
+        
+                    border-bottom: none;
                 }
             }
         }
