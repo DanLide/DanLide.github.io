@@ -154,6 +154,15 @@
                             }
                         }
                     }
+
+                    &:hover {
+                        span {
+                            @include vendor('transition', (
+                            'background-color #{_duration(transition)} ease',
+                            ));
+                            background-color: _palette(bg-alt);
+                        }
+                    }
                 }
             }
         }
@@ -258,32 +267,6 @@
         
                 &:active {
                     background-color: #565c5c;
-                }
-            }
-        }
-
-        .small-menu {
-            height: 0;
-            width: 0;
-            position: fixed;
-            z-index: -1;
-            top: 0;
-            left: 0;
-            background: _palette(small-menu-bg);  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-            @include vendor('transition', '.3s ease-in-out');
-
-            a {
-                &.closebtn {
-                    position: absolute;
-                    top: 0;
-                    right: 15px;
-                    font-size: 36px;
-                    margin-left: 50px;
-        
-                    border-bottom: none;
                 }
             }
         }

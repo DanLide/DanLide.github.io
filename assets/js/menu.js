@@ -1,13 +1,19 @@
 const button = document.getElementById("navbarBtn");
+const menu = document.getElementById("smallMenu");
+const menuList = document.getElementById("menuList");
 
 button.addEventListener('click', event => {
     if (button.className === "navbar-toggle-btn") {
-        button.className += " active"
-        document.getElementById("smallMenu").style.height = "100%";
-        document.getElementById("smallMenu").style.width = "100%";
+        button.className += " active";
+        menuList.className += " menu-list-opened";
+
+        menu.style.height = "100%";
+        menu.style.width = "100%";
     } else {
-        document.getElementById("smallMenu").style.height = "0";
-        document.getElementById("smallMenu").style.width = "0";
-        button.className = "navbar-toggle-btn"
+        menu.style.height = "0";
+        menu.style.width = "0";
+
+        button.className = "navbar-toggle-btn";
+        menuList.className = " menu-list";
     }
-  });
+});
