@@ -19,14 +19,19 @@
         }
     }
 
+    .col-xs {
+        &-4, &-6, &-8, &-12 {
+            float: left;
+
+            position: relative;
+            min-height: 1px;
+            padding-left: _size(padding-col-xs);
+            padding-right: _size(padding-col-xs);
+        }
+    }
+
     .col-xs-6 {
         width: _size(width-col-xs-6);
-        float: left;
-
-        position: relative;
-        min-height: 1px;
-        padding-left: _size(padding-col-xs-6);
-        padding-right: _size(padding-col-xs-6);
 
         &+div {
             text-align: right;
@@ -50,12 +55,6 @@
 
     .col-xs-12 {
         width: _size(width-col-xs-12);
-        float: left;
-
-        position: relative;
-        min-height: 1px;
-        padding-left: _size(container-padding);
-        padding-right: _size(container-padding);
         margin-bottom: _size(margin-btm-footer);
     }
 
