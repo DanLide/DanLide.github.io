@@ -1,2 +1,2 @@
 # ConTip
-##  Content recommendation web system prototype for the Web labs assignment 
+###  Content recommendation web system prototype for the Web labs assignment 
