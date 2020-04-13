@@ -1,7 +1,9 @@
+const filterSidebar = document.getElementById("filterSidebar");
+
 function openSidebar() {
-    document.getElementById("filterSidebar").style.width = "250px";
+    filterSidebar.style.width = "250px";
 }
   
 function closeSidebar() {
-    document.getElementById("filterSidebar").style.width = "0";
+    filterSidebar.style.width = "0";
 }
