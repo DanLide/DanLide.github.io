@@ -87,6 +87,7 @@
                 @include vendor('transition', 'opacity .2s ease');
                 
                 position: absolute;
+                cursor: pointer;
                 z-index: 0;
                 font-size: _font(ribbon);
                 padding: 0 8px 8px 8px;
@@ -96,6 +97,11 @@
                 opacity: .3;
                 width: _size(ribbon-width);
                 height: _size(ribbon-height);
+
+                &-active {
+                    opacity: 1;
+                    color: rgb(251, 197, 0);
+                }
 
                 &:hover {
                     opacity: .6;

@@ -19,14 +19,14 @@
         }
     }
 
-    .col-xs {
-        &-4, &-6, &-8, &-12 {
+    .col {
+        &-xs-4, &-xs-6, &-xs-8, &-xs-12, &-sm-8, &-sm-push-4, &-sm-4, &-pull-8 {
             float: left;
 
             position: relative;
             min-height: 1px;
-            padding-left: _size(padding-col-xs);
-            padding-right: _size(padding-col-xs);
+            padding-left: _size(padding-col);
+            padding-right: _size(padding-col);
         }
     }
 
