@@ -1,17 +1,38 @@
-function dropdownFunc() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+$("#profileButton").click(function(){
+    $("#pageDropped").addClass("show");
+    $("body").addClass("nonscroll");
+
+    $("#profileDropdown").addClass("profile-dropdown");
+    $("#profileDropdown").addClass("dropdown-active");
+});
+
+$("#switcher").click(function(){
+    $("#pageDropped").addClass("show");
+    $("body").addClass("nonscroll");
+
+    $("#switchDropdown").addClass("dropdown-active");
+    $('.title-list-options-box-options-sorting').addClass("z-boost-200");
+});
+
+$("#smallProfileButton").click(function(){
+    $("#pageDropped").addClass("show");
+    $("body").addClass("nonscroll");
+
+    $("#profileDropdown").addClass("profile-dropdown");
+    $("#profileDropdown").addClass("dropdown-active");
+    $("#profileDropdown").addClass("small-profile-dropdown");
+});
   
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.title-list-sorting-switcher')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
+$(document).click(function(event) {
+    if (!$(event.target).closest("#profileButton,#switcher,#smallProfileButton").length) {
+        $("#pageDropped").removeClass("show");
+        $('.title-list-options-box-options-sorting').removeClass("z-boost-200");
+        $("body").removeClass("nonscroll");
+
+        $("#profileDropdown").removeClass("dropdown-active");
+        $("#profileDropdown").removeClass("profile-dropdown");
+        $("#profileDropdown").removeClass("small-profile-dropdown");
+        $("#switchDropdown").removeClass("dropdown-active");
     }
-  }
+});
+  
