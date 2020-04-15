@@ -110,39 +110,6 @@
         }
     }
 
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: _palette(header-bg);
-        width: _size(dropdown-content);
-        overflow: auto;
-        right: 0;
-        z-index: 1;
-        border-radius: _size(border-radius);
-    }
-
-    .dropdown-item {
-        @include vendor('display', 'flex');
-        @include vendor('transition', (
-                'background-color #{_duration(transition)} ease-in-out',
-                'color #{_duration(transition)} ease-in-out'
-            ));
-        cursor: pointer;
-
-        &:hover {
-            color: _palette(dropdown-item-text);
-            background-color: _palette(dropdown-item-bg);
-        }
-
-        &-label {
-            padding: _size(drop-label-padding);
-        }
-    }
-
-    .show {
-        display: block;
-    }
-
     .search-page {
         .title-list {
             &-grid {

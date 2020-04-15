@@ -43,3 +43,55 @@
 	.login-page {
 		height: 100%;
 	}
+
+	.show {
+        display: block !important;
+	}
+
+	.dropdown-content {
+		display: none;
+        position: absolute;
+        background-color: _palette(header-bg);
+        width: _size(dropdown-content);
+        overflow: auto;
+        right: 0;
+        z-index: 1;
+        border-radius: _size(border-radius);
+		max-height: 250px;
+		
+        &.dropdown-active {
+            @include vendor('display', 'flex');
+            @include vendor('flex-direction', 'column');
+
+            box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2),0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12);
+            z-index: 200;
+        }
+    }
+
+    .dropdown-item {
+        @include vendor('display', 'flex');
+        @include vendor('transition', (
+            'background-color #{_duration(transition)} ease-in-out',
+            'color #{_duration(transition)} ease-in-out'
+		));
+		
+		color: #adb6b9 !important;
+        cursor: pointer;
+
+        &:hover {
+            color: _palette(dropdown-item-text) !important;
+            background-color: _palette(dropdown-item-bg);
+        }
+
+        &-label {
+            padding: _size(drop-label-padding);
+        }
+	}
+	
+	.z-boost-200 {
+		z-index: 200 !important;
+	}
+
+	.nonscroll {
+		overflow: hidden;
+	}
