@@ -213,6 +213,10 @@
             height: $header-nav-height;
             cursor: pointer;
             padding-right: $menu-btn-padding;
+
+            &:last-child {
+                padding-right: 0;
+            }
         }
 
         .menu-btn-link {
