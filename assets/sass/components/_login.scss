@@ -1,0 +1,306 @@
+/* Login */
+
+    .login {
+        &-app-container {
+            @include vendor('display', 'flex');
+            @include vendor('flex-direction', 'row');
+            @include vendor('flex-wrap', 'wrap');
+
+            height: 100%;
+            padding: 0 !important;
+
+            .splash {
+                &-container {
+                    @include vendor('flex', '50%');
+                    @include vendor('display', 'flex');
+                    @include vendor('flex-direction', 'column');
+                    @include vendor('justify-content', 'space-between');
+    
+                    background: rgb(17,34,57);
+                    background: linear-gradient(180deg, rgba(17,34,57,1) 31%, rgba(29,61,103,1) 100%);
+
+                    &-btm {
+                        display: none;
+                    }
+                }
+
+                &-panel {
+                    margin: auto;
+                    margin-left: 90px;
+                    color: #fff;
+                    line-height: 1.5em;
+
+                    &-pretitle {
+                        font-size: 1.8em;
+                        font-weight: 100;
+                        line-height: 1.2em;
+                    }
+
+                    &-title {
+                        font-size: 5em;
+                        line-height: normal;
+                        font-weight: 700;
+                        margin-left: -5px;
+                    }
+
+                    &-subtitle {
+                        margin-top: 40px;
+                        font-size: 1.8em;
+                        max-width: 500px;
+                        line-height: normal;
+                    }
+
+                    &-signup-btn {
+                        color: #fff;
+                        border: 1px solid #fff;
+                        margin-top: 30px !important;
+                    }
+                }
+
+
+
+                &-footer {
+                    @include vendor('display', 'flex');
+                    @include vendor('flex-direction', 'row');
+                    @include vendor('justify-content', 'space-between');
+
+                    margin: 0 90px 30px;
+                    font-size: .75em;
+                    color: #fff;
+
+                    &-links-title {
+                        margin-bottom: 10px;
+                    }
+
+                    &-social-media-block {
+                        img {
+                            height: 14px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .one-alt {
+                font-size: 3.25em;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-container {
+            @include vendor('flex', '50%');
+            @include vendor('display', 'flex');
+            @include vendor('flex-direction', 'column');
+            @include vendor('justify-content', 'center');
+            @include vendor('align-items', 'center');
+
+            background: #fff;
+        }
+
+        &-wrapper {
+            margin: auto;
+            padding: 20px;
+        }
+
+        &-form {
+            width: 500px;
+            margin: 30px 0;
+            color: _palette(color-login-form);
+
+            &-title {
+                font-size: 1.65em;
+
+                span {
+                    font-weight: 700;
+                    margin-left: 2px;
+                    margin-right: 2px;
+                }
+            }
+
+            &-subtitle {
+                font-size: 1em;
+            }
+
+            &-user-id-row {
+                margin-top: 20px;
+                margin-bottom: 5px;
+                min-height: 95px;
+
+                .box {
+                    &-form-item {
+                        overflow: hidden;
+                        min-height: 41px;
+                    }
+                }
+
+                label {
+                    font-size: 18px;
+                }
+            }
+
+            &-user-id {
+                background-color: #f4f7fb;
+                border-bottom: 1px solid _palette(border-btm-input);
+            }
+
+            .box-checkbox-wrapper {
+                margin-top: 5px;
+                margin-bottom: 1rem;
+            }
+
+            &-login-btn-wrapper {
+                @include vendor('display', 'flex');
+                @include vendor('flex-direction', 'row');
+                @include vendor('justify-content', 'space-between');
+            }
+
+            &-login-btn {
+                margin-top: .4rem;
+                width: auto !important;
+            }
+        }
+    }
+
+    .forgot-links {
+        margin-top: 10px;
+        font-size: .9em;
+
+        a {
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: _palette(forgot-link);
+            font-size: 12.6px;
+            line-height: 12.6px;
+
+            &:hover, &:focus, &:active {
+                color: _palette(forgot-link) !important;
+            }
+        }
+    }
+
+    .copyright-clause {
+        font-size: .688em;
+        font-weight: 200;
+
+        padding-bottom: 45px;
+    }
+
+/* Breakpoints */
+
+    @include breakpoint('<=large') {
+        .login {
+            &-form {
+                width: 350px;
+
+                &-title {
+                    font-size: 1.3em;
+                }
+
+                &-subtitle {
+                    font-size: 1em;
+                }
+            }
+        }
+        
+        .splash {
+            &-container {
+                .splash {
+                    &-panel {
+                        &-pretitle {
+                            font-size: 1.6em;
+                            font-weight: 100;
+                        }
+        
+                        &-title {
+                            font-size: 3.25em;
+                        }
+        
+                        &-subtitle {
+                            font-size: 1.05em;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @include breakpoint('<=small') {
+        .login {
+            &-app-container {
+                @include vendor('display', 'flex');
+                @include vendor('flex-direction', 'row');
+                @include vendor('flex-wrap', 'wrap');
+    
+                height: 100%;
+                padding: 0 !important;
+            }
+            
+            &-wrapper {
+                padding: 0 !important;
+            }
+
+            &-container {
+                flex: 100%;
+
+                .copyright-clause {
+                    display: none;
+                }
+            }
+        }
+
+        .splash {
+            &-container, &-container-btm {
+                display: block !important;
+            }
+
+            &-container {
+                .splash {
+                    &-panel {
+                        margin: 50px 20px;
+    
+                        &-title {
+                            margin-bottom: 10px;
+                        }
+    
+                        &-signup-btn {
+                            margin-top: 15px !important;
+                        }
+                    }
+                }
+
+                &-top {
+                    .splash {
+                        &-panel {
+                            &-subtitle {
+                                display: none;
+                            }
+                            
+                            &-signup-btn {
+                                display: none;
+                            }
+                        }
+
+                        &-footer {
+                            display: none;
+                        }
+                    }
+                }
+
+                &-btm {
+                    .splash {
+                        &-footer {
+                            margin: 20px;
+                        }
+                    }
+
+                    .copyright-clause {
+                        display: block;
+                        color: #fff;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
