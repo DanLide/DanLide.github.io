@@ -1,0 +1,76 @@
+/* Horizontal list */
+
+    .horizontal {
+        &-title-list {
+            margin-top: 10px;
+
+            &-inner {
+                position: relative;
+
+                &:hover {
+                    .hidden-horizontal-scrollbar-nav {
+                        display: flex !important;
+                    }
+                }
+            }
+
+            &-items {
+                @include vendor('display', 'flex');
+                @include vendor('flex-wrap', 'nowrap');
+                @include vendor('align-items', 'center');
+                @include vendor('transition', 'transform .4s ease-in');
+
+                position: relative;
+
+                > * {
+                    flex: 0 0 auto;
+                }
+            }
+
+            &-item {
+                margin: 0 5px 5px;
+                position: relative;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            .title-poster {
+                width: 190px;
+            }
+        }
+    }
+
+    .hidden-horizontal-scrollbar {
+        @include vendor('display', 'flex');
+
+        min-height: 236px;
+        position: relative;
+
+        overflow-x: scroll;
+        scrollbar-width: none;
+
+        &-nav {
+            @include vendor('justify-content', 'center');
+            @include vendor('align-items', 'center');
+
+            background: rgba(12,21,29,.8);
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 40px;
+            display: none;
+            font-size: 25px;
+            z-index: 2;
+
+            &.hidden-horizontal-scrollbar-nav-left {
+                left: 0;
+            }
+
+            &.hidden-horizontal-scrollbar-nav-right {
+                right: 0;
+            }
+        }
+    }

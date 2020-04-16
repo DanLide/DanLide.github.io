@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ConTip</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body id="body" class="is-preload">
+    <div id="overlay" class="overlay">
+        <div id="pageDropped" class="page-dropped"></div>
+        <div id="profileDropdown" class="dropdown-content">
+            <a class="no-border-btm" href="account-data.html">
+                <div class="dropdown-item">
+                    <span class="dropdown-item-label">
+                        Account data
+                    </span>
+                </div>
+            </a>
+            <a class="no-border-btm" href="preferences.html">
+                <div class="dropdown-item">
+                    <span class="dropdown-item-label">
+                        Preferences
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+        <header class="header">
+            <div class="navbar-container">
+                <nav class="navbar">
+                    <a href="index.html" class="logo no-border-btm">
+                        <span class="symbol">
+                            <img src="images/52c6e732-95a2-4d17-8ef2-e546b2b064df_200x200.png" alt="ConTip">
+                        </span>
+                        <span class="title">ConTip</span>
+                    </a>
+                    <div class="menu">
+                        <div class="menu-btn">
+                            <a href="index.html" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Home
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="search.html" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Search
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a id="profileButton" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Profile
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="watchlist.html" class="menu-btn-link no-border-btm">
+                                <span class="menu-btn-item">
+                                    Watchlist
+                                </span>
+                            </a>
+                        </div>
+                        <div class="menu-btn">
+                            <a href="login.html">
+                                <div class="logout-btn no-border-btm">
+                                    <button type="button">
+                                        Log out
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                    </div><!-- /.menu -->
+                    <div class="navbar-small-left">
+                        <div class="navbar-toggle-container">
+                            <div id="navbarBtn" class="navbar-toggle-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-small-right">
+                        <a class="no-border-btm" id="smallProfileButton">
+                            <div class="navbar-btn">
+                                <div>
+                                    <!-- Ne lez' ono tebya sozhret -->
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-user fa-w-14">
+                                        <path fill="currentColor" d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z" class=""></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="navbar-btn navbar-btn-watchlist">
+                        <a href="watchlist.html" class="navbar-btn-link no-border-btm">
+                            <!-- Ne lez' ono tebya sozhret -->
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="navbar__button__icon bookmark svg-inline--fa fa-bookmark fa-w-12">
+                                <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav><!-- /.navbar -->
+            </div><!-- /.navbar-container -->
+            <div id="smallMenu" class="small-menu">
+                <div id="menuList" class="menu-list">
+                    <ul>
+                        <li class="menu-list-item">
+                            <a class="no-border-btm" href="index.html">
+                                <span class="key">
+                                    01
+                                </span>
+                                <span class="title">
+                                    Home
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="no-border-btm" href="search.html">
+                                <span class="key">
+                                    02
+                                </span>
+                                <span class="title">
+                                    Search
+                                </span>
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="no-border-btm" href="login.html">
+                                <span class="key">
+                                    03
+                                </span>
+                                <span class="title">
+                                    Log out
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.small-menu -->
+        </header><!-- /.header -->
+
+    <!-- Main -->
+        <main class="main">
+            <div class="home">
+                <header class="home-header">
+                    <h1 class="home-header-title">
+                        Control your preferences easily
+                    </h1>
+                </header>
+                <div class="titles">
+                    <section class="movies-section">
+                        <div class="movies-section-title">
+                            <span>Drama</span>
+                            <input id="drama-checkbox" type="checkbox" name="drama-checkbox">
+                            <label for="drama-checkbox"></label>
+                        </div>
+                        <div class="horizontal-title-list">
+                            <div class="horizontal-title-list-inner">
+                                <div id="scroll-container-drama" class="hidden-horizontal-scrollbar">
+                                    <div class="horizontal-title-list-items">
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/130011621/s166" alt="Parasite" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/154373248/s166" alt="Knives Out" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/152335398/s166" alt="1917" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/120577802/s166" alt="Once Upon a Time… in Hollywood" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/10323124/s166" alt="Contagion" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/172073366/s166" alt="Devs" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/167545815/s166" alt="Uncut Gems" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/165410021/s166" alt="The Outsider" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8635336/s166" alt="Mr. Robot" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8587552/s166" alt="The Walking Dead" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.horizontal-title-list-items -->
+                                </div><!-- /.hidden-horizontal-scrollbar -->
+                                <a id="lefty-drama" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-left">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10">
+                                        <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path>
+                                    </svg>
+                                </a>
+                                <a id="righty-drama" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-right">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
+                                        <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div><!-- /.horizontal-title-list -->
+                    </section><!-- /.movies-section -->
+                    <section class="movies-section">
+                        <div class="movies-section-title">
+                            <span>Thriller</span>
+                            <input id="thriller-checkbox" type="checkbox" name="thriller-checkbox">
+                            <label for="thriller-checkbox"></label>
+                        </div>
+                        <div class="horizontal-title-list">
+                            <div class="horizontal-title-list-inner">
+                                <div id="scroll-container-thriller" class="hidden-horizontal-scrollbar">
+                                    <div class="horizontal-title-list-items">
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/149330541/s166" alt="The Platform" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8635336/s166" alt="Mr. Robot" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8697367/s166" alt="John Wick" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8707220/s166" alt="Minority Report" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/449990/s166" alt="Interstellar" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8714217/s166" alt="The Shining" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8709095/s166" alt="Arrival" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/120454663/s166" alt="Us" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8711516/s166" alt="Memento" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8593646/s166" alt="Breaking Bad" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.horizontal-title-list-items -->
+                                </div><!-- /.hidden-horizontal-scrollbar -->
+                                <a id="lefty-thriller" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-left">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10">
+                                        <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path>
+                                    </svg>
+                                </a>
+                                <a id="righty-thriller" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-right">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
+                                        <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div><!-- /.horizontal-title-list -->
+                    </section><!-- /.movies-section -->
+                    <section class="movies-section">
+                        <div class="movies-section-title">
+                            <span>Science-fiction</span>
+                            <input id="science-fiction-checkbox" type="checkbox" name="science-fiction-checkbox">
+                            <label for="science-fiction-checkbox"></label>
+                        </div>
+                        <div class="horizontal-title-list">
+                            <div class="horizontal-title-list-inner">
+                                <div id="scroll-container-science-fiction" class="hidden-horizontal-scrollbar">
+                                    <div class="horizontal-title-list-items">
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/153446310/s166" alt="Star Wars: The Rise of Skywalker" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/149330541/s166" alt="The Platform" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8580203/s166" alt="Rick and Morty" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8587552/s166" alt="The Walking Dead" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8668189/s166" alt="The Matrix" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8713313/s166" alt="Back to the Future" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8707220/s166" alt="Minority Report" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/449990/s166" alt="Interstellar" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8709095/s166" alt="Arrival" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/147309925/s166" alt="The Mandalorian" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.horizontal-title-list-items -->
+                                </div><!-- /.hidden-horizontal-scrollbar -->
+                                <a id="lefty-science-fiction" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-left">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10">
+                                        <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path>
+                                    </svg>
+                                </a>
+                                <a id="righty-science-fiction" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-right">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
+                                        <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div><!-- /.horizontal-title-list -->
+                    </section><!-- /.movies-section -->
+                    <section class="movies-section">
+                        <div class="movies-section-title">
+                            <span>Crime</span>
+                            <input id="crime-checkbox" type="checkbox" name="crime-checkbox">
+                            <label for="crime-checkbox"></label>
+                        </div>
+                        <div class="horizontal-title-list">
+                            <div class="horizontal-title-list-inner">
+                                <div id="scroll-container-crime" class="hidden-horizontal-scrollbar">
+                                    <div class="horizontal-title-list-items">
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/154373248/s166" alt="Knives Out" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/167545815/s166" alt="Uncut Gems" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/165410021/s166" alt="The Outsider" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8635336/s166" alt="Mr. Robot" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8697367/s166" alt="John Wick" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8707220/s166" alt="Minority Report" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8698860/s166" alt="The Godfather" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8637338/s166" alt="The Wolf of Wall Street" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8593646/s166" alt="Breaking Bad" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="title-page.html" class="horizontal-title-list-item no-border-btm">
+                                            <div>
+                                                <div class="title-poster">
+                                                    <!-- Ne lez' ono tebya sozhret -->
+                                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bookmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-bookmark fa-w-12 title-poster-ribbon">
+                                                        <path fill="currentColor" d="M0 512V48C0 21.49 21.49 0 48 0h288c26.51 0 48 21.49 48 48v464L192 400 0 512z" class=""></path>
+                                                    </svg>
+                                                    <img src="https://images.justwatch.com/poster/8695539/s166" alt="The Dark Knight" class="title-poster-img">
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div><!-- /.horizontal-title-list-items -->
+                                </div><!-- /.hidden-horizontal-scrollbar -->
+                                <a id="lefty-crime" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-left">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-left fa-w-10">
+                                        <path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z" class=""></path>
+                                    </svg>
+                                </a>
+                                <a id="righty-crime" class="hidden-horizontal-scrollbar-nav hidden-horizontal-scrollbar-nav-right">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-10">
+                                        <path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div><!-- /.horizontal-title-list -->
+                    </section><!-- /.movies-section -->
+                </div><!-- /.titles -->
+            </div><!-- /.home -->
+        </main>
+
+    <!-- Footer -->
+        <footer class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <strong>ConTip</strong>
+                    | Recommendation Service
+                </div>
+                <div class="col-xs-6">
+                    © 2020 ConTip
+                    <span>(1.0.0)</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1">
+                    <h5>Top 5 movies</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Contagion</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Knives out</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Parasite</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Uncut Gems</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 TV Shows</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Devs</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Avatar: The Last Airbender</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Better Call Saul</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">The Good Place</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Tiger King: Murder, Mayhem and Madness</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 in the theaters</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Knives Out</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Uncut Gems</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Jojo Rabbit</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Star Wars: The Rise of Skywalker</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>Top 5 titles in 2020</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">1917</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Devs</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Jojo Rabbit</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Onward</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">Tiger King: Murder, Mayhem and Madness</a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-xs-12">
+                    <h5>The IMDb Top 5</h5>
+                    <ol class="list-unstyled">
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">The Shawshank Redemption</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">The Godfather</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">The Godfather 2</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">The Dark Knight</a>
+                        </li>
+                        <li>
+                            <a href="title-page.html" class="footer-link no-border-btm">12 Angry Men</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </footer>
+
+    <!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+            <script src="assets/js/navbar.js"></script>
+            <script src="assets/js/accordion.js"></script>
+            <script src="assets/js/dropdown.js"></script>
+            <script src="assets/js/menu.js"></script>
+            <script src="assets/js/scroll.js"></script>
+</body>
+</html>

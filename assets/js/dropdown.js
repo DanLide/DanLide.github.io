@@ -1,4 +1,5 @@
 $("#profileButton").click(function(){
+    $("#overlay").addClass("show-flex");
     $("#pageDropped").addClass("show");
     $("body").addClass("nonscroll");
 
@@ -7,6 +8,7 @@ $("#profileButton").click(function(){
 });
 
 $("#switcher").click(function(){
+    $("#overlay").addClass("show-flex");
     $("#pageDropped").addClass("show");
     $("body").addClass("nonscroll");
 
@@ -15,6 +17,7 @@ $("#switcher").click(function(){
 });
 
 $("#smallProfileButton").click(function(){
+    $("#overlay").addClass("show-flex");
     $("#pageDropped").addClass("show");
     $("body").addClass("nonscroll");
 
@@ -25,6 +28,7 @@ $("#smallProfileButton").click(function(){
   
 $(document).click(function(event) {
     if (!$(event.target).closest("#profileButton,#switcher,#smallProfileButton").length) {
+        $("#overlay").removeClass("show-flex");
         $("#pageDropped").removeClass("show");
         $('.title-list-options-box-options-sorting').removeClass("z-boost-200");
         $("body").removeClass("nonscroll");

@@ -18,12 +18,29 @@
         cursor: pointer;
         -ms-touch-action: none;
         touch-action: none;
-        z-index: 100;
+        z-index: 2;
     }
 
-    .profile-dropdown {
-        left: 71.5%;
-        top: 46px;
+    .overlay {
+        display: none;
+        
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .profile {
+        &-dropdown {
+            left: 71.5%;
+            top: 46px;
+        }
+
+        &-btn {
+            position: relative;
+        }
     }
 
     .small-profile-dropdown {

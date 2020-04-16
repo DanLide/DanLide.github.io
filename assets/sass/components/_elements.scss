@@ -68,6 +68,24 @@
         }
     }
 
+    .movies-section-title {
+        input[type="checkbox"],
+        input[type="radio"] {
+            & + label { 
+                padding-right: 1.25em;
+
+                &:before {
+                    font-size: 0.6em;
+                    line-height: 2em;
+                    height: 2em;
+                    width: 2em;
+                    top: 4%;
+                    left: initial;
+                }
+            }
+        }
+    }
+
 /* Button */
     .box {
         &-btn {
