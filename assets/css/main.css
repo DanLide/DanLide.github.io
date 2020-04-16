@@ -1295,6 +1295,35 @@ input[type="radio"] + label:before {
   .info-box a {
     color: #78a6b8 !important;
     cursor: pointer; }
+  .info-box .hidden-horizontal-scrollbar {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    overflow: hidden;
+    position: relative; }
+    .info-box .hidden-horizontal-scrollbar-items {
+      display: -moz-flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -moz-flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      position: relative;
+      scrollbar-width: none;
+      margin-top: -5px;
+      bottom: -5px; }
+      .info-box .hidden-horizontal-scrollbar-items > * {
+        flex: 0 0 auto; }
+      .info-box .hidden-horizontal-scrollbar-items::-webkit-scrollbar {
+        display: none; }
 
 .col-sm-8 {
   width: 66.66667%; }
@@ -1344,34 +1373,6 @@ input[type="radio"] + label:before {
 .clearfix {
   clear: both;
   content: " "; }
-
-.hidden-horizontal-scrollbar {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  overflow: hidden;
-  position: relative; }
-  .hidden-horizontal-scrollbar-items {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    -moz-flex-wrap: nowrap;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    position: relative;
-    scrollbar-width: none;
-    margin-top: -5px;
-    bottom: -5px; }
-    .hidden-horizontal-scrollbar-items > * {
-      flex: 0 0 auto; }
 
 .text-wrap-pre-line {
   font-size: 16px;
@@ -1823,38 +1824,39 @@ input[type="radio"] + label:before {
       margin-left: 0; }
   .horizontal-title-list .title-poster {
     width: 190px; }
-
-.hidden-horizontal-scrollbar {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  min-height: 236px;
-  position: relative;
-  overflow-x: scroll;
-  scrollbar-width: none; }
-  .hidden-horizontal-scrollbar-nav {
-    -moz-justify-content: center;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-    -moz-align-items: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center;
-    background: rgba(12, 21, 29, 0.8);
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 40px;
-    display: none;
-    font-size: 25px;
-    z-index: 2; }
-    .hidden-horizontal-scrollbar-nav.hidden-horizontal-scrollbar-nav-left {
-      left: 0; }
-    .hidden-horizontal-scrollbar-nav.hidden-horizontal-scrollbar-nav-right {
-      right: 0; }
+  .horizontal-title-list .hidden-horizontal-scrollbar {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    min-height: 236px;
+    position: relative;
+    overflow-x: scroll;
+    scrollbar-width: none; }
+    .horizontal-title-list .hidden-horizontal-scrollbar::-webkit-scrollbar {
+      display: none; }
+    .horizontal-title-list .hidden-horizontal-scrollbar-nav {
+      -moz-justify-content: center;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      background: rgba(12, 21, 29, 0.8);
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 40px;
+      display: none;
+      font-size: 25px;
+      z-index: 2; }
+      .horizontal-title-list .hidden-horizontal-scrollbar-nav.hidden-horizontal-scrollbar-nav-left {
+        left: 0; }
+      .horizontal-title-list .hidden-horizontal-scrollbar-nav.hidden-horizontal-scrollbar-nav-right {
+        right: 0; }
 
 /* Header */
 .header {
@@ -2042,7 +2044,7 @@ input[type="radio"] + label:before {
     -ms-align-items: center;
     align-items: center;
     width: 100%;
-    overflow: auto; }
+    overflow: hidden; }
     .header .menu > * {
       display: inherit;
       align-items: inherit; }

@@ -196,7 +196,7 @@
             @include vendor('align-items', 'center');
 
             width: 100%;
-            overflow: auto;
+            overflow: hidden;
 
             > * {
                 display: inherit;

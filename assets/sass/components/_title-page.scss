@@ -50,6 +50,34 @@
             color: #78a6b8 !important;
             cursor: pointer;
         }
+
+        .hidden-horizontal-scrollbar {
+            @include vendor('display', 'flex');
+    
+            overflow: hidden;
+            position: relative;
+    
+            &-items {
+                @include vendor('display', 'flex');
+                @include vendor('align-items', 'center');
+                @include vendor('flex-wrap', 'nowrap');
+    
+                overflow-x: auto;
+                position: relative;
+                scrollbar-width: none;
+    
+                margin-top: -5px;
+                bottom: -5px;
+    
+                > * {
+                    flex: 0 0 auto;
+                }
+                
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+        }
     }
 
     .col-sm {
@@ -134,30 +162,6 @@
     .clearfix {
         clear: both;
         content: " ";
-    }
-
-    .hidden-horizontal-scrollbar {
-        @include vendor('display', 'flex');
-
-        overflow: hidden;
-        position: relative;
-
-        &-items {
-            @include vendor('display', 'flex');
-            @include vendor('align-items', 'center');
-            @include vendor('flex-wrap', 'nowrap');
-
-            overflow-x: auto;
-            position: relative;
-            scrollbar-width: none;
-
-            margin-top: -5px;
-            bottom: -5px;
-
-            > * {
-                flex: 0 0 auto;
-            }
-        }
     }
 
     .text-wrap-pre-line {
