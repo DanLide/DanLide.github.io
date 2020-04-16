@@ -100,6 +100,10 @@
         &-wrapper {
             margin: auto;
             padding: 20px;
+
+            &.login-wrapper-full {
+                width: 100%;
+            }
         }
 
         &-form {
@@ -107,8 +111,14 @@
             margin: 30px 0;
             color: _palette(color-login-form);
 
+            &.register-form {
+                width: initial;
+                border: 1px solid #4071b0;
+                padding: 20px;
+            }
+
             &-title {
-                font-size: 1.65em;
+                font-size: 1.5em;
 
                 span {
                     font-weight: 700;
@@ -246,6 +256,13 @@
 
                 .copyright-clause {
                     display: none;
+                }
+            }
+
+            &-form {
+                &.register-form {
+                    margin-left: 10px;
+                    margin-right: 10px;
                 }
             }
         }

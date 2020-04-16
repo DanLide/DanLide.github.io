@@ -30,6 +30,7 @@
 
 	body {
 		background: _palette(bg);
+		position: relative;
 	
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -45,7 +46,11 @@
 	}
 
 	.show {
-        display: block !important;
+		display: block !important;
+		
+		&-flex {
+			@include vendor('display', 'flex !important');
+		}
 	}
 
 	.dropdown-content {
@@ -95,3 +100,5 @@
 	.nonscroll {
 		overflow: hidden;
 	}
+
+	

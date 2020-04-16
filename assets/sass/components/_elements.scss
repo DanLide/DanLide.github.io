@@ -68,6 +68,24 @@
         }
     }
 
+    .movies-section-title {
+        input[type="checkbox"],
+        input[type="radio"] {
+            & + label { 
+                padding-right: 1.25em;
+
+                &:before {
+                    font-size: 0.6em;
+                    line-height: 2em;
+                    height: 2em;
+                    width: 2em;
+                    top: 4%;
+                    left: initial;
+                }
+            }
+        }
+    }
+
 /* Button */
     .box {
         &-btn {
@@ -103,6 +121,10 @@
                 background-color: _palette(box-primary);
                 border: 3px solid transparent;
                 color: _palette(logout-font);
+
+                &.box-btn-canel {
+                    background-color: _palette(box-btn-canel);
+                }
 
                 &:hover {
                     background-color: _palette(hover-primary);

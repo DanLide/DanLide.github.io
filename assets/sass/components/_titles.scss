@@ -8,12 +8,15 @@
             padding-bottom: 16px;
 
             &-title {
+                @include vendor('display', 'flex');
+                @include vendor('justify-content', 'space-between');
+
                 text-transform: none;
                 color: _palette(section-title);
                 font-size: _font(section-title-font);
                 line-height: _font(section-title-lh);
                 font-weight: _font(section-title-fw);
-                margin-bottom: _size(section-margin-bottom);
+                margin-bottom: _size(section-margin-btm);
             }
         }
     }
