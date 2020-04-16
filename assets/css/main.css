@@ -821,6 +821,8 @@ input[type="radio"] + label:before {
     background-color: #0f62fe;
     border: 3px solid transparent;
     color: #fff; }
+    .box-btn-primary.box-btn-canel {
+      background-color: #808082; }
     .box-btn-primary:hover {
       background-color: #0353e9; }
     .box-btn-primary:focus {
@@ -1589,12 +1591,18 @@ input[type="radio"] + label:before {
 .login-wrapper {
   margin: auto;
   padding: 20px; }
+  .login-wrapper.login-wrapper-full {
+    width: 100%; }
 .login-form {
   width: 500px;
   margin: 30px 0;
   color: #161616; }
+  .login-form.register-form {
+    width: initial;
+    border: 1px solid #4071b0;
+    padding: 20px; }
   .login-form-title {
-    font-size: 1.65em; }
+    font-size: 1.5em; }
     .login-form-title span {
       font-weight: 700;
       margin-left: 2px;
@@ -1690,6 +1698,9 @@ input[type="radio"] + label:before {
     flex: 100%; }
     .login-container .copyright-clause {
       display: none; }
+  .login-form.register-form {
+    margin-left: 10px;
+    margin-right: 10px; }
 
   .splash-container, .splash-container-btm {
     display: block !important; }

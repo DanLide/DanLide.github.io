@@ -104,6 +104,10 @@
                 border: 3px solid transparent;
                 color: _palette(logout-font);
 
+                &.box-btn-canel {
+                    background-color: _palette(box-btn-canel);
+                }
+
                 &:hover {
                     background-color: _palette(hover-primary);
                 }
