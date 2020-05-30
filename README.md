@@ -1,2 +1,2 @@
 # ConTip
-##  Content recommendation web service prototype for the Web labs assignment 
+##  Just another static UI of Uniteam-Official/ConTip (https://github.com/UniTeam-Official/Contip-frontend)
